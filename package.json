@@ -1,0 +1,17 @@
+{
+  "name": "mustafo-portfolio",
+  "version": "1.0.0",
+  "description": "Mustafo — web developer portfolio",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "sass": "sass --watch scss/style.scss:css/style.css",
+    "test-telegram": "node telegram-test.js",
+    "build:css": "sass --style=compressed scss/style.scss css/style.css"
+  },
+  "dependencies": {
+    "express": "^5.3.0",
+    "sass": "^1.108.2"
+  }
+}
