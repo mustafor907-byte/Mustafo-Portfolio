@@ -1,332 +1,332 @@
-<!DOCTYPE html>
-<html lang="uz">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mustafo — Web dasturchi</title>
-  <meta name="description" content="Mustafo — web dasturchi. Zamonaviy, tez va responsiv veb-saytlar.">
-  <meta name="theme-color" content="#0b0414">
-  <meta property="og:title" content="Mustafo — Web developer">
-  <meta property="og:type" content="website">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237a2cff'/%3E%3Cstop offset='1' stop-color='%23ff1f8f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='18' fill='url(%23g)'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='800' font-size='34' text-anchor='middle' fill='white'%3EM%3C/text%3E%3C/svg%3E">
+  <!DOCTYPE html>
+  <html lang="uz">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewpgitort" content="width=device-width, initial-scale=1">
+    <title>Mustafo — Web dasturchi</title>
+    <meta name="description" content="Mustafo — web dasturchi. Zamonaviy, tez va responsiv veb-saytlar.">
+    <meta name="theme-color" content="#0b0414">
+    <meta property="og:title" content="Mustafo — Web developer">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237a2cff'/%3E%3Cstop offset='1' stop-color='%23ff1f8f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='18' fill='url(%23g)'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='800' font-size='34' text-anchor='middle' fill='white'%3EM%3C/text%3E%3C/svg%3E">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 
-  <script>document.documentElement.classList.add('js');</script>
-</head>
-<body class="is-locked">
+    <script>document.documentElement.classList.add('js');</script>
+  </head>
+  <body class="is-locked">
 
-  <!-- Preloader -->
-  <div class="preloader" id="preloader" aria-hidden="true">
-    <div class="preloader__inner">
-      <div class="preloader__name">Mustafo</div>
-      <div class="preloader__bar"><i></i></div>
-    </div>
-  </div>
-
-  <div class="progress" id="progress" aria-hidden="true"></div>
-  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
-
-  <!-- Fixed background: the 3 portraits cross-fade on scroll (profile -> 3/4 -> front) -->
-  <div class="bg" id="bg" aria-hidden="true">
-    <div class="bg__stage" id="bgStage">
-      <img class="bg__layer bg__layer--profile" id="bgProfile" src="images/hero-profile.jpg" alt="">
-      <img class="bg__layer bg__layer--down" id="bgDown" src="images/hero-down.jpg" alt="">
-      <img class="bg__layer bg__layer--front" id="bgFront" src="images/hero-front.jpg" alt="">
-    </div>
-    <div class="bg__vignette"></div>
-    <div class="bg__shade" id="bgShade"></div>
-  </div>
-
-  <!-- ============ HEADER ============ -->
-  <header class="header" id="header">
-    <div class="container header__inner">
-      <a href="#home" class="logo" aria-label="Mustafo">
-        <span class="logo__mark">M</span>
-        <span class="logo__text">Mustafo</span>
-      </a>
-
-      <nav class="nav" id="nav" aria-label="Main">
-        <ul>
-          <li><a href="#home" data-i18n="nav.home" data-link="home">Bosh sahifa</a></li>
-          <li><a href="#about" data-i18n="nav.about" data-link="about">Men haqimda</a></li>
-          <li><a href="#projects" data-i18n="nav.projects" data-link="projects">Loyihalar</a></li>
-          <li><a href="#contact" data-i18n="nav.contact" data-link="contact">Aloqa</a></li>
-        </ul>
-      </nav>
-
-      <div class="header__tools">
-        <div class="lang" role="group" aria-label="Language">
-          <button type="button" data-lang="uz">UZ</button>
-          <button type="button" data-lang="en">EN</button>
-          <button type="button" data-lang="ru">RU</button>
-        </div>
-        <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="nav" data-i18n-aria="nav.menu" aria-label="Menyu">
-          <span></span><span></span><span></span>
-        </button>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+      <div class="preloader__inner">
+        <div class="preloader__name">Mustafo Rasulov</div>
+        <div class="preloader__bar"><i></i></div>
       </div>
     </div>
-  </header>
 
-  <main>
-    <!-- ============ HERO ============ -->
-    <section class="hero" id="home">
-      <div class="hero__sticky" id="heroSticky">
-        <div class="container">
-          <div class="hero__content" id="heroContent">
-            <span class="hero__badge"><i></i><span data-i18n="hero.badge">Web dasturchi</span></span>
-            <p class="hero__hello" data-i18n="hero.hello">Salom, men</p>
-            <h1 class="hero__title" aria-label="Mustafo">
-              <span style="--i:0" aria-hidden="true">M</span><span style="--i:1" aria-hidden="true">u</span><span style="--i:2" aria-hidden="true">s</span><span style="--i:3" aria-hidden="true">t</span><span style="--i:4" aria-hidden="true">a</span><span style="--i:5" aria-hidden="true">f</span><span style="--i:6" aria-hidden="true">o</span>
-            </h1>
-            <p class="hero__role"><span id="typed"></span><span class="cursor" aria-hidden="true"></span></p>
-            <p class="hero__desc" data-i18n="hero.desc">Zamonaviy, tez va responsiv veb-saytlar yarataman.</p>
-            <div class="hero__cta">
-              <a href="#projects" class="btn btn--primary" data-magnetic>
-                <span data-i18n="hero.cta1">Loyihalarni ko'rish</span>
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
-              </a>
-              <a href="#contact" class="btn btn--ghost" data-magnetic>
-                <span data-i18n="hero.cta2">Bog'lanish</span>
-              </a>
+    <div class="progress" id="progress" aria-hidden="true"></div>
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+    <!-- Fixed background: the 3 portraits cross-fade on scroll (profile -> 3/4 -> front) -->
+    <div class="bg" id="bg" aria-hidden="true">
+      <div class="bg__stage" id="bgStage">
+        <img class="bg__layer bg__layer--profile" id="bgProfile" src="images/hero-profile.jpg" alt="">
+        <img class="bg__layer bg__layer--down" id="bgDown" src="images/hero-down.jpg" alt="">
+        <img class="bg__layer bg__layer--front" id="bgFront" src="images/hero-front.jpg" alt="">
+      </div>
+      <div class="bg__vignette"></div>
+      <div class="bg__shade" id="bgShade"></div>
+    </div>
+
+    <!-- ============ HEADER ============ -->
+    <header class="header" id="header">
+      <div class="container header__inner">
+        <a href="#home" class="logo" aria-label="Mustafo Rasulov">
+          <span class="logo__mark">M</span>
+          <span class="logo__text">Mustafo Rasulov</span>
+        </a>
+
+        <nav class="nav" id="nav" aria-label="Main">
+          <ul>
+            <li><a href="#home" data-i18n="nav.home" data-link="home">Bosh sahifa</a></li>
+            <li><a href="#about" data-i18n="nav.about" data-link="about">Men haqimda</a></li>
+            <li><a href="#projects" data-i18n="nav.projects" data-link="projects">Loyihalar</a></li>
+            <li><a href="#contact" data-i18n="nav.contact" data-link="contact">Aloqa</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__tools">
+          <div class="lang" role="group" aria-label="Language">
+            <button type="button" data-lang="uz">UZ</button>
+            <button type="button" data-lang="en">EN</button>
+            <button type="button" data-lang="ru">RU</button>
+          </div>
+          <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="nav" data-i18n-aria="nav.menu" aria-label="Menyu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============ HERO ============ -->
+      <section class="hero" id="home">
+        <div class="hero__sticky" id="heroSticky">
+          <div class="container">
+            <div class="hero__content" id="heroContent">
+              <span class="hero__badge"><i></i><span data-i18n="hero.badge">Web dasturchi</span></span>
+              <p class="hero__hello" data-i18n="hero.hello">Salom, men</p>
+              <h1 class="hero__title" aria-label="Mustafo">
+                <span style="--i:0" aria-hidden="true">M</span><span style="--i:1" aria-hidden="true">u</span><span style="--i:2" aria-hidden="true">s</span><span style="--i:3" aria-hidden="true">t</span><span style="--i:4" aria-hidden="true">a</span><span style="--i:5" aria-hidden="true">f</span><span style="--i:6" aria-hidden="true">o</span>
+              </h1>
+              <p class="hero__role"><span id="typed"></span><span class="cursor" aria-hidden="true"></span></p>
+              <p class="hero__desc" data-i18n="hero.desc">Zamonaviy, tez va responsiv veb-saytlar yarataman.</p>
+              <div class="hero__cta">
+                <a href="#projects" class="btn btn--primary" data-magnetic>
+                  <span data-i18n="hero.cta1">Loyihalarni ko'rish</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                </a>
+                <a href="#contact" class="btn btn--ghost" data-magnetic>
+                  <span data-i18n="hero.cta2">Bog'lanish</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__caption" id="heroCaption">
+            <h2 data-i18n="hero.caption">Keling, birgalikda ajoyib narsa yaratamiz</h2>
+          </div>
+
+          <div class="hero__scroll" id="heroScroll" aria-hidden="true">
+            <div class="hero__scroll-in">
+              <span class="mouse"></span>
+              <span data-i18n="hero.scroll">Pastga suring</span>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="hero__caption" id="heroCaption">
-          <h2 data-i18n="hero.caption">Keling, birgalikda ajoyib narsa yaratamiz</h2>
-        </div>
+      <div class="content">
 
-        <div class="hero__scroll" id="heroScroll" aria-hidden="true">
-          <div class="hero__scroll-in">
-            <span class="mouse"></span>
-            <span data-i18n="hero.scroll">Pastga suring</span>
-          </div>
-        </div>
-      </div>
-    </section>
+        <!-- ============ ABOUT ============ -->
+        <section class="section about" id="about">
+          <div class="container">
+            <div class="about__grid">
 
-    <div class="content">
-
-      <!-- ============ ABOUT ============ -->
-      <section class="section about" id="about">
-        <div class="container">
-          <div class="about__grid">
-
-            <div class="about__photo reveal">
-              <div class="about__frame" data-tilt data-tilt-max="7">
-                <img src="images/mustafo.jpg" alt="Mustafo" loading="lazy">
+              <div class="about__photo reveal">
+                <div class="about__frame" data-tilt data-tilt-max="7">
+                  <img src="images/mustafo.jpg" alt="Mustafo" loading="lazy">
+                </div>
+                <div class="about__badge">
+                  <span class="ico"><svg viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg></span>
+                  <div>
+                    <strong>Mustafo</strong>
+                    <small data-i18n="about.role">Web dasturchi</small>
+                  </div>
+                </div>
               </div>
-              <div class="about__badge">
-                <span class="ico"><svg viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg></span>
-                <div>
-                  <strong>Mustafo</strong>
-                  <small data-i18n="about.role">Web dasturchi</small>
+
+              <div class="about__text">
+                <div class="section__head reveal" style="margin-bottom:0">
+                  <span class="eyebrow" data-i18n="about.eyebrow">Men haqimda</span>
+                  <h2 class="section__title" data-i18n="about.title">Kod orqali g'oyalarni jonlantiraman</h2>
+                </div>
+                <p class="reveal" data-i18n="about.p1" style="--d:.1s"></p>
+                <p class="reveal" data-i18n="about.p2" style="--d:.2s"></p>
+
+                <dl class="about__info reveal" style="--d:.25s">
+                  <div><dt data-i18n="about.info.name">Ism</dt><dd>Mustafo</dd></div>
+                  <div><dt data-i18n="about.info.job">Kasb</dt><dd data-i18n="about.role">Web dasturchi</dd></div>
+                  <div><dt data-i18n="about.info.langs">Tillar</dt><dd>O'zbek · English · Русский</dd></div>
+                </dl>
+
+                <div class="about__stats reveal" style="--d:.3s">
+                  <div class="stat"><strong data-count="3">0</strong><span data-i18n="about.stat1">Til</span></div>
+                  <div class="stat"><strong data-count="0" id="statProjects">0</strong><span data-i18n="about.stat2">Loyiha</span></div>
+                  <div class="stat"><strong data-count="100" data-suffix="%">0</strong><span data-i18n="about.stat3">Responsiv</span></div>
                 </div>
               </div>
             </div>
 
-            <div class="about__text">
-              <div class="section__head reveal" style="margin-bottom:0">
-                <span class="eyebrow" data-i18n="about.eyebrow">Men haqimda</span>
-                <h2 class="section__title" data-i18n="about.title">Kod orqali g'oyalarni jonlantiraman</h2>
-              </div>
-              <p class="reveal" data-i18n="about.p1" style="--d:.1s"></p>
-              <p class="reveal" data-i18n="about.p2" style="--d:.2s"></p>
+            <!-- What I do -->
+            <div class="about__services" data-stagger>
+              <article class="service">
+                <div class="service__ico"><svg viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg></div>
+                <h3 data-i18n="about.s1.t">Frontend ishlab chiqish</h3>
+                <p data-i18n="about.s1.d"></p>
+              </article>
+              <article class="service">
+                <div class="service__ico"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div>
+                <h3 data-i18n="about.s2.t">Responsiv va animatsiya</h3>
+                <p data-i18n="about.s2.d"></p>
+              </article>
+              <article class="service">
+                <div class="service__ico"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01M6 18h.01"/></svg></div>
+                <h3 data-i18n="about.s3.t">Backend asoslari</h3>
+                <p data-i18n="about.s3.d"></p>
+              </article>
+            </div>
 
-              <dl class="about__info reveal" style="--d:.25s">
-                <div><dt data-i18n="about.info.name">Ism</dt><dd>Mustafo</dd></div>
-                <div><dt data-i18n="about.info.job">Kasb</dt><dd data-i18n="about.role">Web dasturchi</dd></div>
-                <div><dt data-i18n="about.info.langs">Tillar</dt><dd>O'zbek · English · Русский</dd></div>
-              </dl>
-
-              <div class="about__stats reveal" style="--d:.3s">
-                <div class="stat"><strong data-count="3">0</strong><span data-i18n="about.stat1">Til</span></div>
-                <div class="stat"><strong data-count="0" id="statProjects">0</strong><span data-i18n="about.stat2">Loyiha</span></div>
-                <div class="stat"><strong data-count="100" data-suffix="%">0</strong><span data-i18n="about.stat3">Responsiv</span></div>
+            <!-- Skills (edit this list freely) -->
+            <div class="about__skills reveal">
+              <h3 data-i18n="about.skills">Texnologiyalar</h3>
+              <div class="marquee">
+                <div class="marquee__track" id="marqueeTrack">
+                  <ul class="marquee__group">
+                    <li>HTML5</li><li>CSS3</li><li>SASS / SCSS</li><li>JavaScript</li><li>Node.js</li>
+                    <li>Express</li><li>Git &amp; GitHub</li><li>Responsive Design</li><li>REST API</li><li>Figma</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
+        </section>
 
-          <!-- What I do -->
-          <div class="about__services" data-stagger>
-            <article class="service">
-              <div class="service__ico"><svg viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg></div>
-              <h3 data-i18n="about.s1.t">Frontend ishlab chiqish</h3>
-              <p data-i18n="about.s1.d"></p>
-            </article>
-            <article class="service">
-              <div class="service__ico"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div>
-              <h3 data-i18n="about.s2.t">Responsiv va animatsiya</h3>
-              <p data-i18n="about.s2.d"></p>
-            </article>
-            <article class="service">
-              <div class="service__ico"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01M6 18h.01"/></svg></div>
-              <h3 data-i18n="about.s3.t">Backend asoslari</h3>
-              <p data-i18n="about.s3.d"></p>
-            </article>
-          </div>
-
-          <!-- Skills (edit this list freely) -->
-          <div class="about__skills reveal">
-            <h3 data-i18n="about.skills">Texnologiyalar</h3>
-            <div class="marquee">
-              <div class="marquee__track" id="marqueeTrack">
-                <ul class="marquee__group">
-                  <li>HTML5</li><li>CSS3</li><li>SASS / SCSS</li><li>JavaScript</li><li>Node.js</li>
-                  <li>Express</li><li>Git &amp; GitHub</li><li>Responsive Design</li><li>REST API</li><li>Figma</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============ PROJECTS ============ -->
-      <section class="section projects" id="projects">
-        <div class="container">
-          <div class="section__head reveal">
-            <span class="eyebrow" data-i18n="projects.eyebrow">Loyihalar</span>
-            <h2 class="section__title" data-i18n="projects.title">Tanlangan ishlarim</h2>
-            <p class="section__sub" data-i18n="projects.sub"></p>
-          </div>
-
-          <!-- Cards are rendered from projects.js — add your projects there -->
-          <div class="projects__grid" id="projectGrid"></div>
-        </div>
-      </section>
-
-      <!-- ============ CONTACT ============ -->
-      <section class="section contact" id="contact">
-        <div class="container">
-          <div class="contact__grid">
-
-            <div class="reveal">
-              <div class="section__head" style="margin-bottom:0">
-                <span class="eyebrow" data-i18n="contact.eyebrow">Aloqa</span>
-                <h2 class="section__title" data-i18n="contact.title">Keling, gaplashamiz</h2>
-                <p class="section__sub" data-i18n="contact.text"></p>
-              </div>
-
-              <!-- Contact links -->
-              <div class="contact__links">
-                <a class="contact-link" href="mailto:mustaforasulov52@gmail.com">
-                  <span class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
-                  <span><small>Email</small><strong>mustaforasulov52@gmail.com</strong></span>
-                </a>
-                <a class="contact-link" href="https://t.me/Notshaxa11" target="_blank" rel="noopener">
-                  <span class="ico"><svg viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4 20-7Z"/><path d="M22 2 11 13"/></svg></span>
-                  <span><small>Telegram</small><strong>@Notshaxa11</strong></span>
-                </a>
-                <a class="contact-link" href="https://github.com/mustafor907-byte" target="_blank" rel="noopener">
-                  <span class="ico"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span>
-                  <span><small>GitHub</small><strong>github.com/mustafor907-byte</strong></span>
-                </a>
-              </div>
+        <!-- ============ PROJECTS ============ -->
+        <section class="section projects" id="projects">
+          <div class="container">
+            <div class="section__head reveal">
+              <span class="eyebrow" data-i18n="projects.eyebrow">Loyihalar</span>
+              <h2 class="section__title" data-i18n="projects.title">Tanlangan ishlarim</h2>
+              <p class="section__sub" data-i18n="projects.sub"></p>
             </div>
 
-            <form class="form reveal" id="contactForm" style="--d:.15s" novalidate>
-              <div class="field">
-                <label for="cName" data-i18n="contact.f.name">Ismingiz</label>
-                <input id="cName" name="name" type="text" autocomplete="name" maxlength="80" required data-i18n-placeholder="contact.f.namePh" placeholder="Ismingiz">
-              </div>
-              <div class="field">
-                <label for="cEmail">Email</label>
-                <input id="cEmail" name="email" type="email" autocomplete="email" maxlength="120" required placeholder="name@example.com">
-              </div>
-              <div class="field">
-                <label for="cMsg" data-i18n="contact.f.msg">Xabaringiz</label>
-                <textarea id="cMsg" name="message" maxlength="2000" required data-i18n-placeholder="contact.f.msgPh" placeholder="Xabaringiz..."></textarea>
-              </div>
-              <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-              <button class="btn btn--primary btn--block" id="sendBtn" type="submit" data-magnetic>
-                <span data-i18n="contact.f.send">Yuborish</span>
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
-              </button>
-              <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
-              <div class="form__fallback" id="formFallback" hidden>
-                <a class="btn btn--ghost" id="fbTelegram" href="https://t.me/Notshaxa11" target="_blank" rel="noopener" data-i18n="contact.f.viaTg">Telegram orqali yuborish</a>
-                <a class="btn btn--ghost" id="fbMail" href="mailto:mustaforasulov52@gmail.com" data-i18n="contact.f.viaMail">Email orqali yuborish</a>
-              </div>
-            </form>
-
+            <!-- Cards are rendered from projects.js — add your projects there -->
+            <div class="projects__grid" id="projectGrid"></div>
           </div>
-        </div>
-      </section>
-    </div>
-  </main>
+        </section>
 
-  <footer class="footer">
-    <div class="container footer__inner">
-      <p>© <span id="year">2026</span> Mustafo. <span data-i18n="footer.rights">Barcha huquqlar himoyalangan.</span></p>
-      <button type="button" class="footer__top" id="toTop">
-        <span data-i18n="footer.top">Tepaga</span>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-      </button>
-    </div>
-  </footer>
+        <!-- ============ CONTACT ============ -->
+        <section class="section contact" id="contact">
+          <div class="container">
+            <div class="contact__grid">
 
-  <script src="projects.js"></script>
-  <script src="script.js"></script>
-  <!-- ============ CONTACT ============ -->
-      <section class="section contact" id="contact">
-        <div class="container">
-          <div class="contact__grid">
+              <div class="reveal">
+                <div class="section__head" style="margin-bottom:0">
+                  <span class="eyebrow" data-i18n="contact.eyebrow">Aloqa</span>
+                  <h2 class="section__title" data-i18n="contact.title">Keling, gaplashamiz</h2>
+                  <p class="section__sub" data-i18n="contact.text"></p>
+                </div>
 
-            <div class="reveal">
-              <div class="section__head" style="margin-bottom:0">
-                <span class="eyebrow" data-i18n="contact.eyebrow">Aloqa</span>
-                <h2 class="section__title" data-i18n="contact.title">Keling, gaplashamiz</h2>
-                <p class="section__sub" data-i18n="contact.text"></p>
+                <!-- Contact links -->
+                <div class="contact__links">
+                  <a class="contact-link" href="mailto:mustaforasulov52@gmail.com">
+                    <span class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+                    <span><small>Email</small><strong>mustaforasulov52@gmail.com</strong></span>
+                  </a>
+                  <a class="contact-link" href="https://t.me/Notshaxa11" target="_blank" rel="noopener">
+                    <span class="ico"><svg viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4 20-7Z"/><path d="M22 2 11 13"/></svg></span>
+                    <span><small>Telegram</small><strong>@Notshaxa11</strong></span>
+                  </a>
+                  <a class="contact-link" href="https://github.com/mustafor907-byte" target="_blank" rel="noopener">
+                    <span class="ico"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span>
+                    <span><small>GitHub</small><strong>github.com/mustafor907-byte</strong></span>
+                  </a>
+                </div>
               </div>
 
-              <!-- Contact links -->
-              <div class="contact__links">
-                <a class="contact-link" href="mailto:mustaforasulov52@gmail.com">
-                  <span class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
-                  <span><small>Email</small><strong>mustaforasulov52@gmail.com</strong></span>
-                </a>
-                <a class="contact-link" href="https://t.me/Notshaxa11" target="_blank" rel="noopener noreferrer">
-                  <span class="ico"><svg viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4 20-7Z"/><path d="M22 2 11 13"/></svg></span>
-                  <span><small>Telegram</small><strong>@Notshaxa11</strong></span>
-                </a>
-                <a class="contact-link" href="https://github.com/mustafor907-byte" target="_blank" rel="noopener noreferrer">
-                  <span class="ico"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span>
-                  <span><small>GitHub</small><strong>github.com/mustafor907-byte</strong></span>
-                </a>
-              </div>
+              <form class="form reveal" id="contactForm" style="--d:.15s" novalidate>
+                <div class="field">
+                  <label for="cName" data-i18n="contact.f.name">Ismingiz</label>
+                  <input id="cName" name="name" type="text" autocomplete="name" maxlength="80" required data-i18n-placeholder="contact.f.namePh" placeholder="Ismingiz">
+                </div>
+                <div class="field">
+                  <label for="cEmail">Email</label>
+                  <input id="cEmail" name="email" type="email" autocomplete="email" maxlength="120" required placeholder="name@example.com">
+                </div>
+                <div class="field">
+                  <label for="cMsg" data-i18n="contact.f.msg">Xabaringiz</label>
+                  <textarea id="cMsg" name="message" maxlength="2000" required data-i18n-placeholder="contact.f.msgPh" placeholder="Xabaringiz..."></textarea>
+                </div>
+                <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+                <button class="btn btn--primary btn--block" id="sendBtn" type="submit" data-magnetic>
+                  <span data-i18n="contact.f.send">Yuborish</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                </button>
+                <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+                <div class="form__fallback" id="formFallback" hidden>
+                  <a class="btn btn--ghost" id="fbTelegram" href="https://t.me/Notshaxa11" target="_blank" rel="noopener" data-i18n="contact.f.viaTg">Telegram orqali yuborish</a>
+                  <a class="btn btn--ghost" id="fbMail" href="mailto:mustaforasulov52@gmail.com" data-i18n="contact.f.viaMail">Email orqali yuborish</a>
+                </div>
+              </form>
+
             </div>
-
-            <form class="form reveal" id="contactForm" style="--d:.15s" novalidate>
-              <div class="field">
-                <label for="cName" data-i18n="contact.f.name">Ismingiz</label>
-                <input id="cName" name="name" type="text" autocomplete="name" maxlength="80" required data-i18n-placeholder="contact.f.namePh" placeholder="Ismingiz">
-              </div>
-              <div class="field">
-                <label for="cEmail">Email</label>
-                <input id="cEmail" name="email" type="email" autocomplete="email" maxlength="120" required placeholder="name@example.com">
-              </div>
-              <div class="field">
-                <label for="cMsg" data-i18n="contact.f.msg">Xabaringiz</label>
-                <textarea id="cMsg" name="message" maxlength="2000" required data-i18n-placeholder="contact.f.msgPh" placeholder="Xabaringiz..."></textarea>
-              </div>
-              <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-              <button class="btn btn--primary btn--block" id="sendBtn" type="submit" data-magnetic>
-                <span data-i18n="contact.f.send">Yuborish</span>
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
-              </button>
-              <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
-              <div class="form__fallback" id="formFallback" hidden>
-                <a class="btn btn--ghost" id="fbTelegram" href="https://t.me/Notshaxa11" target="_blank" rel="noopener noreferrer" data-i18n="contact.f.viaTg">Telegram orqali yuborish</a>
-                <a class="btn btn--ghost" id="fbMail" href="mailto:mustaforasulov52@gmail.com" data-i18n="contact.f.viaMail">Email orqali yuborish</a>
-              </div>
-            </form>
-
           </div>
-        </div>
-      </section>
-</body>
-</html>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>© <span id="year">2026</span> Mustafo. <span data-i18n="footer.rights">Barcha huquqlar himoyalangan.</span></p>
+        <button type="button" class="footer__top" id="toTop">
+          <span data-i18n="footer.top">Tepaga</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+        </button>
+      </div>
+    </footer>
+
+    <script src="projects.js"></script>
+    <script src="script.js"></script>
+    <!-- ============ CONTACT ============ -->
+        <section class="section contact" id="contact">
+          <div class="container">
+            <div class="contact__grid">
+
+              <div class="reveal">
+                <div class="section__head" style="margin-bottom:0">
+                  <span class="eyebrow" data-i18n="contact.eyebrow">Aloqa</span>
+                  <h2 class="section__title" data-i18n="contact.title">Keling, gaplashamiz</h2>
+                  <p class="section__sub" data-i18n="contact.text"></p>
+                </div>
+
+                <!-- Contact links -->
+                <div class="contact__links">
+                  <a class="contact-link" href="mailto:mustaforasulov52@gmail.com">
+                    <span class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+                    <span><small>Email</small><strong>mustaforasulov52@gmail.com</strong></span>
+                  </a>
+                  <a class="contact-link" href="https://t.me/Notshaxa11" target="_blank" rel="noopener noreferrer">
+                    <span class="ico"><svg viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4 20-7Z"/><path d="M22 2 11 13"/></svg></span>
+                    <span><small>Telegram</small><strong>@Notshaxa11</strong></span>
+                  </a>
+                  <a class="contact-link" href="https://github.com/mustafor907-byte" target="_blank" rel="noopener noreferrer">
+                    <span class="ico"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span>
+                    <span><small>GitHub</small><strong>github.com/mustafor907-byte</strong></span>
+                  </a>
+                </div>
+              </div>
+
+              <form class="form reveal" id="contactForm" style="--d:.15s" novalidate>
+                <div class="field">
+                  <label for="cName" data-i18n="contact.f.name">Ismingiz</label>
+                  <input id="cName" name="name" type="text" autocomplete="name" maxlength="80" required data-i18n-placeholder="contact.f.namePh" placeholder="Ismingiz">
+                </div>
+                <div class="field">
+                  <label for="cEmail">Email</label>
+                  <input id="cEmail" name="email" type="email" autocomplete="email" maxlength="120" required placeholder="name@example.com">
+                </div>
+                <div class="field">
+                  <label for="cMsg" data-i18n="contact.f.msg">Xabaringiz</label>
+                  <textarea id="cMsg" name="message" maxlength="2000" required data-i18n-placeholder="contact.f.msgPh" placeholder="Xabaringiz..."></textarea>
+                </div>
+                <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+                <button class="btn btn--primary btn--block" id="sendBtn" type="submit" data-magnetic>
+                  <span data-i18n="contact.f.send">Yuborish</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                </button>
+                <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+                <div class="form__fallback" id="formFallback" hidden>
+                  <a class="btn btn--ghost" id="fbTelegram" href="https://t.me/Notshaxa11" target="_blank" rel="noopener noreferrer" data-i18n="contact.f.viaTg">Telegram orqali yuborish</a>
+                  <a class="btn btn--ghost" id="fbMail" href="mailto:mustaforasulov52@gmail.com" data-i18n="contact.f.viaMail">Email orqali yuborish</a>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </section>
+  </body>
+  </html>
